@@ -19,6 +19,8 @@ public class Canvas
     // shape identity and colors) is slightly more complex than necessary. This
     // is done on purpose to keep the interface and instance fields of the
     // shape objects in this project clean and simple for educational purposes.
+    
+    //changed canvas size, added lightPurple, purple, darkPurple, grey, and darkGrey
 
     private static Canvas canvasSingleton;
 
@@ -28,7 +30,8 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Picture Demo", 500, 300, 
+            //changed canvas size
+            canvasSingleton = new Canvas("BlueJ Picture Demo", 600, 400, 
                                          Color.white);
         }
         canvasSingleton.setVisible(true);
@@ -132,7 +135,7 @@ public class Canvas
             graphic.setColor(new Color(30, 75, 220));
         }
         else if(colorString.equals("yellow")) {
-            graphic.setColor(new Color(255, 230, 0));
+            graphic.setColor(new Color(191, 147, 0));
         }
         else if(colorString.equals("green")) {
             graphic.setColor(new Color(80, 160, 60));
@@ -142,6 +145,21 @@ public class Canvas
         }
         else if(colorString.equals("white")) {
             graphic.setColor(Color.white);
+        }
+        else if(colorString.equals("darkPurple")) {
+            graphic.setColor(new Color(67, 50, 107));
+        }
+        else if(colorString.equals("purple")) {
+            graphic.setColor(new Color(135, 113, 191));
+        }
+        else if(colorString.equals("lightPurple")) {
+            graphic.setColor(new Color(207, 199, 224));
+        }
+        else if(colorString.equals("grey")) {
+            graphic.setColor(new Color(192,192,192));
+        }
+        else if(colorString.equals("darkGrey")) {
+            graphic.setColor(new Color(105,105,105));
         }
         else {
             graphic.setColor(Color.black);
